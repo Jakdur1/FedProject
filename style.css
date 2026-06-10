@@ -1,9 +1,9 @@
 body {
-    
+    background-color: "422979"
 }
 
 header {
-    
+    background-color:"1D192B"
 }
 
 main {
@@ -29,4 +29,9 @@ h1{font-family:"Irish Grover";
 }
 p{
     
+}
+title-main{
+    font-family:"Irish Grover";
+    display: flex
+
 }
