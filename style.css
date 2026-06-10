@@ -1,9 +1,9 @@
 body {
-
+    
 }
 
 header {
-
+    
 }
 
 main {
@@ -12,4 +12,21 @@ main {
 
 footer {
 
+}
+
+img{
+
+    position: absolute;
+    width: 162px;
+    height: 162px;
+    left: 18px;
+    top: 3px;
+    
+    background: url(image.png);
+}
+h1{font-family:"Irish Grover";
+    dispay: flex
+}
+p{
+    
 }
