@@ -1,9 +1,9 @@
 body {
-    background-color: "#422979"
+    background-color:#422979
 }
 
 header {
-    background-color:"#2D192B"
+    background-color:#2D192B
 }
 
 main {
@@ -15,8 +15,7 @@ footer {
 }
 
 img{
-
-    position: absolute;
+ 
     width: 162px;
     height: 162px;
     left: 18px;
@@ -27,12 +26,19 @@ img{
 h1{font-family:"Irish Grover";
     display: flex
 }
-p{
+p{font-family:"Irish Grover";
+    display: flex
     
 }
 title-main{font-family:"Irish Grover";
     display: flex  
 }
-    
 
+h3{font-family:"Irish Grover";
+    display: flex
+
+}
+h5{font-family:"Irish Grover";
+    display: flex
+}
 
