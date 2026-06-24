@@ -3,8 +3,14 @@ body {
 }
 
 header {
-    background-color:#2D192B
+    background-color: #2D192B;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+
 }
+
 
 main {
 
@@ -24,13 +30,14 @@ img{
     background: url(image.png);
 }
 h1{font-family:"Irish Grover";
-    display: flex
+    text-align: center;
 }
-p{font-family:"Irish Grover";
-    display: flex
+p{  
+    font-family:"Irish Grover";
+    
     
 }
-title-main{font-family:"Irish Grover";
+.title-main{font-family:"Irish Grover";
     display: flex  
 }
 
