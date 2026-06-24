@@ -1,6 +1,8 @@
+let buttons = document.querySelectorAll('button');
 
-let button = document.querySelectorAll('button')[3];
-button.addEventListenr ('click', function(){
-alert('');
-console.log('klick');
-})
+buttons.forEach(function(btn) {
+    btn.addEventListener('click', function () {
+        alert('Objednávka pridaná!');
+        console.log('order');
+    });
+});
