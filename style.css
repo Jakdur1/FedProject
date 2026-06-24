@@ -3,7 +3,7 @@ body {
 }
 
 header {
-    background-color:"#1D192B"
+    background-color:"#2D192B"
 }
 
 main {
@@ -31,6 +31,8 @@ p{
     
 }
 title-main{font-family:"Irish Grover";
-    display: flex
+    display: flex  
 }
     
+
+
