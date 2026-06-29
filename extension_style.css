@@ -1,0 +1,52 @@
+body {
+    background-color:#422979
+}
+
+img{
+ 
+    width: 162px;
+    height: 162px;
+    left: 18px;
+    top: 3px;
+    
+    background: url(image.png);
+}
+h1{font-family:"Irish Grover";
+    text-align: center;
+}
+p{  
+    font-family:"Irish Grover";
+    text-align: center;
+    
+}
+.title-main{font-family:"Irish Grover";
+    display: flex  
+}
+
+h3{font-family:"Irish Grover";
+    display: flex
+
+}
+h5{font-family:"Irish Grover";
+    display: flex
+}
+
+button{
+  display: center;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: 2px solid rgb(44, 137, 145);
+  padding: 14px 50px;
+  background-color: rgb(29, 100, 106);
+  font-size: 16px;
+}
+
+.parent-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+
