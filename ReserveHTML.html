@@ -1,88 +1,98 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="sk">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rezervácia</title>
-    <link rel="stylesheet" href="ReserveWebsiteCSS.css">
+    <link rel="stylesheet" href="ReserveWebsiteCSS.css" />
     <script src="script.js"></script>
-</head>
-<body>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-P2ZEN1FHNP"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-<header>
-        <div class="logo_taos">
-        <div class="logo"> <img src = "Taos_LOGO1.png"></div>
-        <h1 class = "title-main">TAO'S</h1>
-    </div>
-    <div class="right">
+      gtag("config", "G-P2ZEN1FHNP");
+    </script>
+  </head>
+  <body>
+    <header>
+      <div class="logo_taos">
+        <div class="logo"><img src="Taos_LOGO1.png" /></div>
+        <h1 class="title-main">TAO'S</h1>
+      </div>
+      <div class="right">
         <a href="menu.html">Menu</a>
         <a href="ReserveHTML.html">Rezervacia</a>
-    <a href="index.html#onas">O nás</a>
-    <a href="#kontakt">Kontakt</a>
-    <a href="Warning_Extension.html">Prečítať</a>
-       <div class="search"> <img src = "Taos_IMAGE4.png"></div>
-    </div>
+        <a href="index.html#onas">O nás</a>
+        <a href="#kontakt">Kontakt</a>
+        <a href="Warning_Extension.html">Prečítať</a>
+        <div class="search"><img src="Taos_IMAGE4.png" /></div>
+      </div>
     </header>
 
     <main>
-        <form>
-            <br><br>
-            <label for="meno">Meno:</label>
-        <input type="text" id="meno" name="meno" required>
-    <br><br>
-    <label for="telefon">Telefonné Číslo:</label>
-        <input type="number" id="telefon" name="telefon" required>
-    <br><br>
-    <label for="email">E-mail:</label>
-        <input type="email" id="email" name="email" required>
-        <br><br>
-        <input type="checkbox" name="Platba Kartou">Platba Kartou
-        <br><br>
-    <label for="cardnumb">Číslo Karty</label>
-        <input type="number" id="cardnumb" name="cardnumb" required>
-        <br><br>
-    <label for="cardnumb2">CVV</label>
-        <input type="number" id="cardnumb2" name="cardnumb2" required>
-        <br><br>
-    <label for="cardnumb3">Meno na Karte</label>
-        <input type="text" id="cardnumb3" name="cardnumb3" required>
-        <br><br>
-    <label for="cardnumb4">Dátum vypršania</label>
-        <input type="number" id="cardnumb4" name="cardnumb4" required>
-    <label for="cardnumb5"></label>
-        <input type="number" id="cardnumb5" name="cardnumb5" required>
-        <br><br>
+      <form>
+        <br /><br />
+        <label for="meno">Meno:</label>
+        <input type="text" id="meno" name="meno" required />
+        <br /><br />
+        <label for="telefon">Telefonné Číslo:</label>
+        <input type="number" id="telefon" name="telefon" required />
+        <br /><br />
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required />
+        <br /><br />
+        <input type="checkbox" name="Platba Kartou" />Platba Kartou <br /><br />
+        <label for="cardnumb">Číslo Karty</label>
+        <input type="number" id="cardnumb" name="cardnumb" required />
+        <br /><br />
+        <label for="cardnumb2">CVV</label>
+        <input type="number" id="cardnumb2" name="cardnumb2" required />
+        <br /><br />
+        <label for="cardnumb3">Meno na Karte</label>
+        <input type="text" id="cardnumb3" name="cardnumb3" required />
+        <br /><br />
+        <label for="cardnumb4">Dátum vypršania</label>
+        <input type="number" id="cardnumb4" name="cardnumb4" required />
+        <label for="cardnumb5"></label>
+        <input type="number" id="cardnumb5" name="cardnumb5" required />
+        <br /><br />
         <button class="btn_anim" type="submit">Odoslať</button>
         <select name="mesto">
-        <option>Wok reance</option>
-        <option>Kung Pao s kuracím mäsom</option>
-        <option>Bao knedlíčky</option>
-        <option>Wok Dumplings</option>
-        <option>Kura na mede</option>
-        <option>Maki sushi</option>
-        <option>Nigiri sushi</option>
-        <option>Umaraki sushi</option>
-        <option>Castella</option>
-    </select>
-
-        </form>
+          <option>Wok reance</option>
+          <option>Kung Pao s kuracím mäsom</option>
+          <option>Bao knedlíčky</option>
+          <option>Wok Dumplings</option>
+          <option>Kura na mede</option>
+          <option>Maki sushi</option>
+          <option>Nigiri sushi</option>
+          <option>Umaraki sushi</option>
+          <option>Castella</option>
+        </select>
+      </form>
     </main>
 
-<section id="onas">
-<h2>O nás</h2>
-<p>Sme moderný podnik ...................................................</p>
-</section>
-
-
-<section id="kontakt">
-    <h2>Kontakt</h2>
-    <p>Číslo: 0944 217 722</p>
+    <section id="onas">
+      <h2>O nás</h2>
+      <p>
+        Sme moderný podnik ...................................................
+      </p>
     </section>
 
+    <section id="kontakt">
+      <h2>Kontakt</h2>
+      <p>Číslo: 0944 217 722</p>
+    </section>
 
     <footer>
-        <h5>Všetko čo TAO-buješ!</h5>
+      <h5>Všetko čo TAO-buješ!</h5>
     </footer>
-    
-</body>
+  </body>
 </html>
