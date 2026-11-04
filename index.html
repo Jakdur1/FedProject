@@ -3,7 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tao's Chinese Restaurant</title>
+    <meta
+      name="description"
+      content="Objavte príbeh reštaurácie Tao's v centre Prešova. Pozrite si naše menu alebo si rezervujte stôl."
+    />
+    <meta name="theme-color" content="#191713" />
+    <title>Tao's — chuť Ázie v Prešove</title>
     <link rel="stylesheet" href="style.css" />
     <!-- Google tag (gtag.js) -->
     <script
@@ -21,66 +26,162 @@
     </script>
   </head>
   <body>
-    <header>
-      <link
-        href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
-        rel="stylesheet"
-      />
-      <div class="logo_taos">
-        <div class="logo"><img src="Taos_LOGO1.png" /></div>
-        <h1 class="title-main">TAO'S</h1>
-      </div>
-      <div class="right">
-        <div class="btn1"><a href="menu.html">Menu</a></div>
-        <div class="btn2"><a href="ReserveHTML.html">Rezervacia</a></div>
-        <div class="btn3"><a href="index.html#onas">O nás</a></div>
-        <div class="btn4"><a href="#kontakt">Kontakt</a></div>
-        <div class="btn5"><a href="Warning_Extension.html">Prečítať</a></div>
-        <div class="search"><img src="Taos_IMAGE4.png" /></div>
-      </div>
+    <a class="skip-link" href="#obsah">Preskočiť na obsah</a>
+
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Tao's — úvodná stránka">
+        <img src="Taos_LOGO1.png" alt="" width="64" height="64" />
+        <span>TAO'S</span>
+      </a>
+      <nav class="site-nav" aria-label="Hlavná navigácia">
+        <a href="menu.html">Menu</a>
+        <a href="#onas">O nás</a>
+        <a href="#kontakt">Kontakt</a>
+        <a class="nav-cta" href="ReserveHTML.html">Rezervovať stôl</a>
+      </nav>
     </header>
 
-    <main>
-      <h1>Ako sme vznikli?</h1>
-      <h3>
-        Reštaurácia Taos vznikla z túžby vytvoriť miesto kde sa spája kvalitné
-        jedlo s príjemnou atmosférou. Naším cieľom bolo ponúknuť hosťom chutné
-        jedlá pripravené z čerstvých surovín.
-      </h3>
-      <h3 class="information">Informácie o Tao's</h3>
-      <img src="Taos_IMAGE1.png" />
+    <main id="obsah">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-content">
+          <p class="eyebrow">Tao's · Prešov</p>
+          <h1 id="hero-title">Chuť Ázie,<br />blízko vás.</h1>
+          <p class="hero-copy">
+            Miesto, kde sa stretáva dobré jedlo s príjemnou atmosférou.
+            Zastavte sa u nás v centre Prešova.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="menu.html">Pozrieť menu</a>
+            <a class="button button-secondary" href="ReserveHTML.html">Rezervovať stôl</a>
+          </div>
+        </div>
+        <img
+          class="hero-image"
+          src="Taos_IMAGE1.png"
+          alt="Pohľad do reštaurácie Tao's"
+          fetchpriority="high"
+        />
+      </section>
 
-      <h1>Kedy a kde?</h1>
-      <h3>
-        Reštaurácia Taos bola otvorená v roku 2018 v centre Prešova. Vďaka
-        svojej polohe a ponuke si rýchlo získala obľubu medzi miestnymi aj
-        návštevníkmi mesta.
-      </h3>
-      <img src="Taos_IMAGE2.png" />
+      <section class="story section-wrap" id="onas" aria-labelledby="story-title">
+        <div class="section-heading">
+          <p class="eyebrow">Náš príbeh</p>
+          <h2 id="story-title">Vitajte v Tao's</h2>
+          <p>
+            Reštaurácia Tao's vznikla z túžby vytvoriť miesto, kde sa spája
+            kvalitné jedlo s príjemnou atmosférou. Od roku 2018 sme súčasťou
+            centra Prešova a radi privítame miestnych aj návštevníkov mesta.
+          </p>
+        </div>
 
-      <h1>Kto nás založil?</h1>
-      <h3>
-        Reštauráciu Taos založil Peter Novák, ktorý mal dlhoročný záujem o
-        gastronómiu. Jeho cieľom bolo vytvoriť modernú reštauráciu s priateľskou
-        atmosférou a kvalitnými službami.
-      </h3>
-      <img src="Taos_IMAGE3.png" />
+        <div class="story-grid">
+          <article class="story-card">
+            <img
+              src="Taos_IMAGE2.png"
+              alt="Interiér a atmosféra reštaurácie Tao's"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="card-content">
+              <span class="card-number">01</span>
+              <h3>Príjemné miesto</h3>
+              <p>
+                Vytvorili sme priestor, kde si môžete vychutnať jedlo aj chvíle
+                strávené s blízkymi.
+              </p>
+            </div>
+          </article>
+          <article class="story-card">
+            <img
+              src="Taos_IMAGE3.png"
+              alt="Jedlo pripravené v reštaurácii Tao's"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="card-content">
+              <span class="card-number">02</span>
+              <h3>S láskou k jedlu</h3>
+              <p>
+                Naším cieľom je ponúknuť chutné jedlá pripravené z čerstvých
+                surovín a pohostinný servis.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="menu-preview" aria-labelledby="menu-title">
+        <div class="section-wrap">
+          <div class="section-heading">
+            <p class="eyebrow">Niečo dobré na začiatok</p>
+            <h2 id="menu-title">Ochutnajte Tao's</h2>
+            <p>
+              Pozrite si pár obľúbených jedál z našej ponuky a objavte celé
+              menu.
+            </p>
+          </div>
+          <div class="menu-grid">
+            <article class="menu-card">
+              <img
+                src="Taos_MENU_IMAGE2.png"
+                alt="Kung Pao s kuracím mäsom"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="menu-card-content">
+                <h3>Kung Pao s kuracím mäsom</h3>
+                <a href="menu.html">Zobraziť v menu <span aria-hidden="true">→</span></a>
+              </div>
+            </article>
+            <article class="menu-card">
+              <img
+                src="Taos_MENU_IMAGE3.png"
+                alt="Bao knedlíčky"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="menu-card-content">
+                <h3>Bao knedlíčky</h3>
+                <a href="menu.html">Zobraziť v menu <span aria-hidden="true">→</span></a>
+              </div>
+            </article>
+            <article class="menu-card">
+              <img
+                src="Taos_MENU_IMAGE6.png"
+                alt="Maki sushi"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="menu-card-content">
+                <h3>Maki sushi</h3>
+                <a href="menu.html">Zobraziť v menu <span aria-hidden="true">→</span></a>
+              </div>
+            </article>
+          </div>
+          <div class="menu-action">
+            <a class="button button-primary" href="menu.html">Celé menu</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-section" id="kontakt" aria-labelledby="contact-title">
+        <div class="section-wrap contact-inner">
+          <div>
+            <p class="eyebrow">Radi vás privítame</p>
+            <h2 id="contact-title">Zastavte sa u nás</h2>
+            <p>V centre Prešova · Zavolajte nám a rezervujte si stôl.</p>
+          </div>
+          <a class="button button-light" href="tel:+421944217722">
+            0944 217 722
+          </a>
+        </div>
+      </section>
     </main>
 
-    <section id="onas">
-      <h2>O nás</h2>
-      <p>
-        Sme moderný podnik ...................................................
-      </p>
-    </section>
-
-    <section id="kontakt">
-      <h2>Kontakt</h2>
-      <p>Číslo: 0944 217 722</p>
-    </section>
-
-    <footer>
-      <h5>Všetko čo TAO-buješ!</h5>
+    <footer class="site-footer">
+      <a class="footer-brand" href="index.html">TAO'S</a>
+      <p>Všetko, čo po-TAO-buješ.</p>
+      <a href="menu.html">Objavte naše menu <span aria-hidden="true">→</span></a>
     </footer>
   </body>
 </html>

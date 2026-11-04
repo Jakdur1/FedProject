@@ -3,106 +3,191 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TAO'S - Menu</title>
+    <meta
+      name="description"
+      content="Pozrite si ponuku reštaurácie Tao's v Prešove: wok, bao knedlíčky, sushi a dezert."
+    />
+    <meta name="theme-color" content="#191713" />
+    <title>Menu — Tao's, Prešov</title>
     <link rel="stylesheet" href="menustyle.css" />
+    <script src="menu.js" defer></script>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-6M1JFP6B7Q"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-6M1JFP6B7Q"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-  gtag('config', 'G-6M1JFP6B7Q');
-</script>
-
-<meta name="TAOs_Search1" content="chinese ">
-<meta name="chinese-food" content="chinese food">
-<meta name="author" content="Leo Levák">
-<meta name="food1" content="Wok reance">
-<meta name="food2" content="Kung Pao s kuracím mäsom">
-<meta name="food3" content="Bao knedlíčky">
-<meta name="food4" content="Wok Dumplings">
-<meta name="food5" content="Kura na mede">
-<meta name="food6" content="Maki sushi">
-<meta name="food7" content="Nigiri sushi">
-<meta name="food8" content="Umaraki sushi">
-<meta name="food9" content="Castella">
-
-
+      gtag("config", "G-6M1JFP6B7Q");
+    </script>
   </head>
 
   <body>
-    <header>
-      <div class="logo_taos">
-        <div class="logo"><img src="Taos_LOGO1.png" /></div>
-        <h1 class="title-main">TAO'S</h1>
-      </div>
-      <div class="right">
-        <a href="menu.html">Menu</a>
-        <a href="ReserveHTML.html">Rezervacia</a>
+    <a class="skip-link" href="#obsah">Preskočiť na obsah</a>
+
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Tao's — úvodná stránka">
+        <img src="Taos_LOGO1.png" alt="" width="64" height="64" />
+        <span>TAO'S</span>
+      </a>
+      <nav class="site-nav" aria-label="Hlavná navigácia">
+        <a href="index.html">Domov</a>
         <a href="index.html#onas">O nás</a>
-        <a href="#kontakt">Kontakt</a>
-        <a href="Warning_Extension.html">Prečítať</a>
-        <div class="search"><img src="Taos_IMAGE4.png" /></div>
-      </div>
+        <a href="index.html#kontakt">Kontakt</a>
+        <a class="nav-cta" href="ReserveHTML.html">Rezervovať stôl</a>
+      </nav>
     </header>
 
-    <main>
-      <img class="block" src="Taos_MENU_IMAGE1.png" alt="Wok reance" />
-      <h3>Wok reance</h3>
-      <button class="order_button">OBJEDNAŤ!</button>
+    <main id="obsah">
+      <section class="menu-intro" aria-labelledby="page-title">
+        <p class="eyebrow">Tao's · Prešov</p>
+        <h1 id="page-title">Naše menu</h1>
+        <p>
+          Vyberte si niečo, na čo máte chuť. Objednávky prijímame telefonicky.
+        </p>
+        <a class="intro-link" href="tel:+421944217722">
+          Zavolať a objednať <span aria-hidden="true">→</span>
+        </a>
+      </section>
 
-      <img
-        class="block"
-        src="Taos_MENU_IMAGE2.png"
-        alt="Kung Pao s kuracím mäsom"
-      />
-      <h3>Kung Pao s kuracím mäsom</h3>
-      <button class="order_button">OBJEDNAŤ!</button>
+      <section class="menu-section" aria-label="Ponuka jedál">
+        <div class="menu-toolbar">
+          <div class="filters" role="group" aria-label="Filtrovať jedlá podľa kategórie">
+            <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">
+              Všetky jedlá
+            </button>
+            <button class="filter-button" type="button" data-filter="wok" aria-pressed="false">
+              Wok
+            </button>
+            <button class="filter-button" type="button" data-filter="predjedla" aria-pressed="false">
+              Predjedlá
+            </button>
+            <button class="filter-button" type="button" data-filter="sushi" aria-pressed="false">
+              Sushi
+            </button>
+            <button class="filter-button" type="button" data-filter="dezert" aria-pressed="false">
+              Dezert
+            </button>
+          </div>
+          <label class="search-field">
+            <span class="visually-hidden">Hľadať jedlo</span>
+            <svg
+              aria-hidden="true"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+            >
+              <circle cx="10.8" cy="10.8" r="6.8"></circle>
+              <path d="m16 16 4.5 4.5"></path>
+            </svg>
+            <input id="menu-search" type="search" placeholder="Hľadať jedlo…" autocomplete="off" />
+          </label>
+        </div>
 
-      <img class="block" src="Taos_MENU_IMAGE3.png" alt="Bao knedlíčky" />
-      <h3>Bao knedlíčky</h3>
-      <button class="order_button">OBJEDNAŤ!</button>
+        <p class="result-count" id="result-count" aria-live="polite"></p>
 
-      <img class="block" src="Taos_MENU_IMAGE4.png" alt="Wok Dumplings" />
-      <h3>Wok Dumplings</h3>
-      <button class="order_button">OBJEDNAŤ!</button>
+        <div class="menu-grid" id="menu-grid">
+          <article class="menu-card" data-category="wok">
+            <img src="Taos_MENU_IMAGE1.png" alt="Wok reance" width="600" height="480" loading="lazy" decoding="async" />
+            <div class="menu-card-content">
+              <span class="menu-category">Wok</span>
+              <h2>Wok reance</h2>
+              <a class="order-link" href="tel:+421944217722">Objednať telefonicky <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+          <article class="menu-card" data-category="wok">
+            <img src="Taos_MENU_IMAGE2.png" alt="Kung Pao s kuracím mäsom" width="600" height="480" loading="lazy" decoding="async" />
+            <div class="menu-card-content">
+              <span class="menu-category">Wok</span>
+              <h2>Kung Pao s kuracím mäsom</h2>
+              <a class="order-link" href="tel:+421944217722">Objednať telefonicky <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+          <article class="menu-card" data-category="predjedla">
+            <img src="Taos_MENU_IMAGE3.png" alt="Bao knedlíčky" width="600" height="480" loading="lazy" decoding="async" />
+            <div class="menu-card-content">
+              <span class="menu-category">Predjedlá</span>
+              <h2>Bao knedlíčky</h2>
+              <a class="order-link" href="tel:+421944217722">Objednať telefonicky <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+          <article class="menu-card" data-category="predjedla">
+            <img src="Taos_MENU_IMAGE4.png" alt="Wok Dumplings" width="600" height="480" loading="lazy" decoding="async" />
+            <div class="menu-card-content">
+              <span class="menu-category">Predjedlá</span>
+              <h2>Wok Dumplings</h2>
+              <a class="order-link" href="tel:+421944217722">Objednať telefonicky <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+          <article class="menu-card" data-category="wok">
+            <img src="Taos_MENU_IMAGE5.png" alt="Kura na mede" width="600" height="480" loading="lazy" decoding="async" />
+            <div class="menu-card-content">
+              <span class="menu-category">Wok</span>
+              <h2>Kura na mede</h2>
+              <a class="order-link" href="tel:+421944217722">Objednať telefonicky <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+          <article class="menu-card" data-category="sushi">
+            <img src="Taos_MENU_IMAGE6.png" alt="Maki sushi" width="600" height="480" loading="lazy" decoding="async" />
+            <div class="menu-card-content">
+              <span class="menu-category">Sushi</span>
+              <h2>Maki sushi</h2>
+              <a class="order-link" href="tel:+421944217722">Objednať telefonicky <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+          <article class="menu-card" data-category="sushi">
+            <img src="Taos_MENU_IMAGE7.png" alt="Nigiri sushi" width="600" height="480" loading="lazy" decoding="async" />
+            <div class="menu-card-content">
+              <span class="menu-category">Sushi</span>
+              <h2>Nigiri sushi</h2>
+              <a class="order-link" href="tel:+421944217722">Objednať telefonicky <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+          <article class="menu-card" data-category="sushi">
+            <img src="Taos_MENU_IMAGE8.png" alt="Umaraki sushi" width="600" height="480" loading="lazy" decoding="async" />
+            <div class="menu-card-content">
+              <span class="menu-category">Sushi</span>
+              <h2>Umaraki sushi</h2>
+              <a class="order-link" href="tel:+421944217722">Objednať telefonicky <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+          <article class="menu-card" data-category="dezert">
+            <img src="Taos_MENU_IMAGE9.png" alt="Castella" width="600" height="480" loading="lazy" decoding="async" />
+            <div class="menu-card-content">
+              <span class="menu-category">Dezert</span>
+              <h2>Castella</h2>
+              <a class="order-link" href="tel:+421944217722">Objednať telefonicky <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+        </div>
 
-      <img class="block" src="Taos_MENU_IMAGE5.png" alt="Kura na mede" />
-      <h3>Kura na mede</h3>
-      <button class="order_button">OBJEDNAŤ!</button>
+        <p class="empty-state" id="empty-state" hidden>
+          Nenašli sa žiadne jedlá. Skúste iný názov alebo kategóriu.
+        </p>
+      </section>
 
-      <img class="block" src="Taos_MENU_IMAGE6.png" alt="Maki sushi" />
-      <h3>Maki sushi</h3>
-      <button class="order_button">OBJEDNAŤ!</button>
-
-      <img class="block" src="Taos_MENU_IMAGE7.png" alt="Nigiri sushi" />
-      <h3>Nigiri sushi</h3>
-      <button class="order_button">OBJEDNAŤ!</button>
-
-      <img class="block" src="Taos_MENU_IMAGE8.png" alt="Umaraki sushi" />
-      <h3>Umaraki sushi</h3>
-      <button class="order_button">OBJEDNAŤ!</button>
-
-      <img class="block" src="Taos_MENU_IMAGE9.png" alt="Castella" />
-      <h3>Castella</h3>
-      <button class="order_button">OBJEDNAŤ!</button>
+      <section class="contact-section" id="kontakt" aria-labelledby="contact-title">
+        <div class="contact-inner">
+          <div>
+            <p class="eyebrow">Máte chuť?</p>
+            <h2 id="contact-title">Objednajte si telefonicky</h2>
+            <p>Zavolajte nám a radi vám poradíme s výberom.</p>
+          </div>
+          <a class="button button-light" href="tel:+421944217722">0944 217 722</a>
+        </div>
+      </section>
     </main>
 
-    <section id="onas">
-      <h2>O nás</h2>
-      <p>
-        Sme moderný podnik ...................................................
-      </p>
-    </section>
-
-    <section id="kontakt">
-      <h2>Kontakt</h2>
-      <p>Číslo: 0944 217 722</p>
-    </section>
-
-    <footer>
-      <h5>Všetko čo TAO-buješ!</h5>
+    <footer class="site-footer">
+      <a class="footer-brand" href="index.html">TAO'S</a>
+      <p>Všetko, čo po-TAO-buješ.</p>
+      <a href="index.html">Späť na úvod <span aria-hidden="true">→</span></a>
     </footer>
   </body>
 </html>
