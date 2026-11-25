@@ -2,12 +2,12 @@
   color-scheme: light;
   --ink: #211d18;
   --muted: #71695f;
-  --paper: #f7f3eb;
-  --surface: #fffdf8;
-  --accent: #c84e2f;
-  --accent-dark: #a63b22;
-  --line: #e8dfd2;
-  --header: #191713;
+  --paper: #f5eddf;
+  --surface: #fffaf0;
+  --accent: #b83a2b;
+  --accent-dark: #84261e;
+  --line: #dfd0bc;
+  --header: #241b18;
 }
 
 * {
@@ -63,6 +63,7 @@ a:focus-visible {
   padding: 10px max(6vw, 24px);
   background: var(--header);
   color: #fffaf1;
+  border-bottom: 3px solid #d5ad62;
 }
 
 .brand {
@@ -121,12 +122,34 @@ a:focus-visible {
   gap: clamp(36px, 7vw, 100px);
   padding: 70px max(8vw, 24px);
   background:
-    radial-gradient(ellipse at 12% 10%, #f0e2ce 0, transparent 48%),
+    radial-gradient(circle at 14% 18%, rgb(184 58 43 / 8%) 0 2px, transparent 3px),
+    radial-gradient(ellipse at 12% 10%, #ead6bb 0, transparent 48%),
     var(--paper);
+  background-size: 28px 28px, auto;
 }
 
 .hero-content {
+  position: relative;
   max-width: 520px;
+}
+
+.hero-charm {
+  position: absolute;
+  top: -62px;
+  right: -24px;
+  display: grid;
+  width: 96px;
+  height: 96px;
+  place-items: center;
+  border: 5px double #e6c46f;
+  border-radius: 50%;
+  background: var(--accent-dark);
+  box-shadow: 0 10px 26px rgb(132 38 30 / 22%);
+  color: #fff8df;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 3.2rem;
+  line-height: 1;
+  transform: rotate(8deg);
 }
 
 .eyebrow {
@@ -145,6 +168,10 @@ a:focus-visible {
   font-weight: 500;
   letter-spacing: -0.055em;
   line-height: 0.98;
+}
+
+.hero h1::first-line {
+  color: var(--accent-dark);
 }
 
 .hero-copy {
@@ -205,8 +232,9 @@ a:focus-visible {
   width: 100%;
   max-height: 460px;
   aspect-ratio: 1.18;
-  border-radius: 48% 48% 12px 12px;
+  border-radius: 180px 180px 16px 16px;
   object-fit: cover;
+  border: 8px solid rgb(255 250 240 / 82%);
   box-shadow: 0 24px 60px rgb(51 37 22 / 16%);
 }
 
@@ -235,6 +263,14 @@ a:focus-visible {
   line-height: 1.15;
 }
 
+.section-heading h2::after {
+  display: block;
+  width: 48px;
+  margin: 16px auto 0;
+  border-top: 2px solid #d5ad62;
+  content: "";
+}
+
 .section-heading > p:last-child {
   margin: 14px 0 0;
   color: var(--muted);
@@ -249,9 +285,18 @@ a:focus-visible {
 .story-card {
   overflow: hidden;
   border: 1px solid var(--line);
-  border-radius: 12px;
+  border-top: 4px solid var(--accent);
+  border-radius: 16px;
   background: var(--surface);
   box-shadow: 0 10px 30px rgb(51 37 22 / 5%);
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.story-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgb(51 37 22 / 11%);
 }
 
 .story-card img {
@@ -286,7 +331,11 @@ a:focus-visible {
 
 .menu-preview {
   padding-block: 74px 82px;
-  background: #fffaf2;
+  background:
+    linear-gradient(rgb(184 58 43 / 3%) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(184 58 43 / 3%) 1px, transparent 1px),
+    #fffaf2;
+  background-size: 24px 24px;
 }
 
 .menu-grid {
@@ -298,6 +347,7 @@ a:focus-visible {
 .menu-card {
   overflow: hidden;
   border: 1px solid var(--line);
+  border-top: 4px solid #d5ad62;
   border-radius: 12px;
   background: var(--surface);
   box-shadow: 0 10px 30px rgb(51 37 22 / 5%);
@@ -356,8 +406,11 @@ a:focus-visible {
 
 .daily-special {
   padding-block: 54px;
-  background: var(--paper);
+  background:
+    linear-gradient(135deg, rgb(213 173 98 / 12%) 25%, transparent 25%) 0 0 / 32px 32px,
+    #f1e3cd;
   color: var(--ink);
+  border-block: 1px solid #decdaf;
 }
 
 .daily-special-inner {
@@ -401,14 +454,15 @@ a:focus-visible {
   width: 100%;
   max-height: 360px;
   aspect-ratio: 1.45;
-  border-radius: 12px;
+  border: 6px solid var(--surface);
+  border-radius: 16px;
   object-fit: cover;
   box-shadow: 0 20px 44px rgb(0 0 0 / 22%);
 }
 
 .contact-section {
   padding: 54px 0;
-  background: #ede3d5;
+  background: #e9d4b5;
 }
 
 .contact-inner {
@@ -496,6 +550,16 @@ a:focus-visible {
   .hero-content {
     margin-inline: auto;
     text-align: center;
+  }
+
+  .hero-charm {
+    position: relative;
+    top: auto;
+    right: auto;
+    width: 78px;
+    height: 78px;
+    margin: 0 auto 18px;
+    font-size: 2.7rem;
   }
 
   .hero-actions {
