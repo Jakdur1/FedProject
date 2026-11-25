@@ -8,23 +8,16 @@
       content="Požiadajte o rezerváciu stola v reštaurácii Tao's v Prešove."
     />
     <meta name="theme-color" content="#191713" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; connect-src 'self'; font-src 'self'; base-uri 'self'; form-action 'self'"
+    />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
     <title>Rezervácia stola — Tao's, Prešov</title>
     <link rel="stylesheet" href="ReserveWebsiteCSS.css" />
     <script src="reservation.js" defer></script>
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-6M1JFP6B7Q"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "G-6M1JFP6B7Q");
-    </script>
+    <meta name="robots" content="index,follow" />
   </head>
 
   <body>
@@ -69,6 +62,7 @@
                 type="text"
                 autocomplete="name"
                 maxlength="80"
+                minlength="2"
                 required
               />
             </div>
@@ -81,9 +75,8 @@
                 type="tel"
                 autocomplete="tel"
                 inputmode="tel"
-                pattern="[+0-9 ()-]{7,20}"
-                title="Zadajte platné telefónne číslo."
                 maxlength="20"
+                title="Zadajte platné telefónne číslo."
                 required
               />
             </div>
@@ -161,7 +154,7 @@
         </aside>
       </section>
 
-      <section class="reservation-result" id="reservation-result" hidden>
+      <section class="reservation-result" id="reservation-result" role="status" aria-live="polite" hidden>
         <div class="result-icon" aria-hidden="true">✓</div>
         <div class="result-copy">
           <h2>Žiadosť je pripravená</h2>
